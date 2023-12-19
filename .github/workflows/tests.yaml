@@ -33,12 +33,14 @@ jobs:
         env:
             PYTHON3_PKG=python3
             PYTHON3=python3
+        run: echo $PYTHON3
 
       - name: 'Set ENV variables (openSUSE Leap)'
         if: ${{ contains(matrix.container, '/opensuse/leap') }}
         env:
             PYTHON3_PKG=python311
             PYTHON3=python3.11
+        run: echo $PYTHON3
 
       - name: 'Install packages'
         run: |
